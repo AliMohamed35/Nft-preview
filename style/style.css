@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Cormorant+Garamond:wght@300&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&family=Outfit:wght@300;400;600&family=Poiret+One&display=swap");
+:root {
+  --Verydarkbluebg: hsl(217, 54%, 11%);
+  --Verydarkblue: hsl(216, 50%, 16%);
+  --Verydarkblue2: hsl(215deg 34.78% 55.56%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Outfit", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--Verydarkbluebg);
+}
+/**************start container************/
+.container {
+  width: 100%;
+}
+.container .box {
+  background-color: var(--Verydarkblue);
+  border-radius: 20px;
+  padding: 16px;
+  margin: 0 10px;
+}
+/**************end container************/
+/***************** card content***********/
+.container .box .image{
+  position: relative;
+}
+.container .box img {
+  border-radius: 20px;
+  margin-bottom: 10px;
+  display: block;
+}
+.container .content{
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  opacity: 0;
+  transition: 0.6 ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .content:hover{
+  opacity: 0.6;
+  background-color: aqua;
+}
+h2 {
+  color: white;
+}
+h2:hover {
+  color: aqua;
+  cursor: pointer;
+}
+h2,
+p {
+  text-align: left;
+  margin-bottom: 10px;
+}
+.contianer .box h2:hover {
+  color: aqua;
+}
+/****************end********************/
+/**************start of price***********/
+.price {
+  display: flex;
+  justify-content: space-between;
+}
+.price p:first-child {
+  color: aqua;
+}
+.price p:nth-child(2) {
+  color: var(--Verydarkblue2);
+}
+/**************end of price**************/
+.container .info {
+  display: flex;
+  align-items: center;
+}
+.container .info img {
+  border: 1px solid white;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.container .info p {
+  margin-top: 10px;
+  color: white;
+}
+.info span:hover {
+  color: aqua;
+  cursor: pointer;
+}
+/*************end of project****************/
+@media (min-width:1000px){
+  .container{
+      width: 30%;
+  }
+}
